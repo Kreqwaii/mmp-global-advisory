@@ -1,0 +1,1778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M &amp; M (P) International | Independent Property &amp; Relocation Support in South East London</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23122338'/%3E%3Cpath d='M9 25V13a7 7 0 0 1 14 0v12' fill='none' stroke='%23B88E3D' stroke-width='2.2' stroke-linecap='round'/%3E%3Cpath d='M13 25V15.5a3 3 0 0 1 6 0V25' fill='none' stroke='%23F8F7F3' stroke-width='1.8' stroke-linecap='round'/%3E%3Cline x1='7' y1='25' x2='25' y2='25' stroke='%23B88E3D' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Roboto:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-base: #F8F7F3;
+      --bg-surface: #FFFFFF;
+      --bg-muted: #EFECE4;
+      --navy: #122338;
+      --navy-soft: #2A3D54;
+      --green: #1D4B3E;
+      --green-soft: #EBF2EF;
+      --gold: #B88E3D;
+      --gold-hover: #9F782E;
+      --gold-soft: #F7F1E3;
+      --border: #DFDBD0;
+      --border-strong: #C9C3B4;
+      --text-main: #122338;
+      --text-secondary: #415164;
+      --text-muted: #667484;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 14px;
+      --ease: cubic-bezier(0.23, 1, 0.32, 1);
+      --shadow-sm: 0 1px 3px rgba(18, 35, 56, 0.06);
+      --shadow-md: 0 8px 24px rgba(18, 35, 56, 0.08);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text-main);
+      background-color: var(--bg-base);
+    }
+
+    h1, h2, h3, .font-editorial {
+      font-family: 'Newsreader', Georgia, serif;
+      font-weight: 600;
+      letter-spacing: -0.015em;
+      color: var(--navy);
+      margin: 0;
+    }
+
+    h4, h5 {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 600;
+      color: var(--navy);
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: 'Roboto', sans-serif;
+      cursor: pointer;
+    }
+
+    .tabular {
+      font-variant-numeric: tabular-nums;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header & Navigation */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background-color: rgba(248, 247, 243, 0.94);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 74px;
+      gap: 20px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: var(--radius-sm);
+      background-color: var(--navy);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+    }
+
+    .brand-name {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    .brand-sub {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--green);
+    }
+
+    .desktop-nav {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-link {
+      background: transparent;
+      border: 1px solid transparent;
+      border-radius: var(--radius-sm);
+      padding: 8px 12px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      transition: background-color 0.2s var(--ease), color 0.2s var(--ease), border-color 0.2s var(--ease);
+    }
+
+    .nav-link:hover {
+      background-color: var(--bg-surface);
+      color: var(--navy);
+    }
+
+    .nav-link.active {
+      background-color: var(--navy);
+      color: #FFFFFF;
+    }
+
+    .nav-cta {
+      background-color: var(--gold);
+      color: var(--navy);
+      font-weight: 600;
+      border: 1px solid var(--gold);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 14px;
+      transition: background-color 0.2s var(--ease), transform 0.2s var(--ease);
+    }
+
+    .nav-cta:hover {
+      background-color: var(--gold-hover);
+      color: #FFFFFF;
+      transform: translateY(-1px);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      background-color: var(--bg-surface);
+      color: var(--navy);
+    }
+
+    /* Mobile Drawer */
+    .mobile-drawer-backdrop {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(18, 35, 56, 0.45);
+      z-index: 60;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.22s var(--ease);
+    }
+
+    .mobile-drawer-backdrop.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .mobile-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: min(320px, 86vw);
+      background-color: var(--bg-surface);
+      border-left: 1px solid var(--border);
+      z-index: 70;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      transform: translateX(100%);
+      transition: transform 0.25s var(--ease);
+    }
+
+    .mobile-drawer.open {
+      transform: translateX(0);
+    }
+
+    .mobile-drawer-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 14px;
+      margin-bottom: 6px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .mobile-nav-link {
+      width: 100%;
+      text-align: left;
+      padding: 12px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid transparent;
+      background: transparent;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--navy);
+    }
+
+    .mobile-nav-link.active {
+      background-color: var(--navy);
+      color: #FFFFFF;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border-radius: var(--radius-sm);
+      font-size: 15px;
+      font-weight: 600;
+      border: 1px solid transparent;
+      transition: background-color 0.2s var(--ease), border-color 0.2s var(--ease), transform 0.2s var(--ease), color 0.2s var(--ease);
+    }
+
+    .btn:active {
+      transform: translateY(0);
+    }
+
+    .btn-primary {
+      background-color: var(--gold);
+      color: var(--navy);
+      border-color: var(--gold);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--gold-hover);
+      border-color: var(--gold-hover);
+      color: #FFFFFF;
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background-color: var(--bg-surface);
+      color: var(--navy);
+      border-color: var(--border-strong);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--bg-muted);
+      border-color: var(--navy);
+    }
+
+    .btn-green {
+      background-color: var(--green);
+      color: #FFFFFF;
+      border-color: var(--green);
+    }
+
+    .btn-green:hover {
+      background-color: #15382E;
+      border-color: #15382E;
+    }
+
+    /* Views */
+    .view-section {
+      display: none;
+      padding: 36px 0 64px;
+    }
+
+    .view-section.active {
+      display: block;
+    }
+
+    /* Hero */
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 32px;
+      align-items: stretch;
+      margin-bottom: 40px;
+    }
+
+    .hero-card {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 38px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 11px;
+      border-radius: 999px;
+      background-color: var(--green-soft);
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      width: fit-content;
+    }
+
+    .hero-title {
+      font-size: clamp(32px, 4vw, 46px);
+      line-height: 1.12;
+      margin-top: 12px;
+    }
+
+    .hero-copy {
+      font-size: 17px;
+      color: var(--text-secondary);
+      max-width: 60ch;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-aside {
+      background-color: var(--navy);
+      color: #F8F7F3;
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .hero-aside h3 {
+      color: #FFFFFF;
+      font-size: 22px;
+    }
+
+    .trust-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .trust-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: #DCE3EC;
+    }
+
+    .trust-list svg {
+      flex-shrink: 0;
+      margin-top: 2px;
+      color: var(--gold);
+    }
+
+    .aside-meta {
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
+      padding-top: 14px;
+      font-size: 13px;
+      color: #B8C4D4;
+    }
+
+    /* Section Headings */
+    .section-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(24px, 2.8vw, 32px);
+    }
+
+    .section-sub {
+      color: var(--text-secondary);
+      font-size: 15px;
+      max-width: 62ch;
+      margin-top: 6px;
+    }
+
+    /* 4-Service Overview Row */
+    .services-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 44px;
+    }
+
+    .service-card {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+      transition: border-color 0.2s var(--ease), transform 0.2s var(--ease);
+    }
+
+    .service-card:hover {
+      border-color: var(--navy);
+      transform: translateY(-2px);
+    }
+
+    .service-tag {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--green);
+      background-color: var(--green-soft);
+      padding: 4px 8px;
+      border-radius: 4px;
+      width: fit-content;
+    }
+
+    .service-card h3 {
+      font-size: 20px;
+      line-height: 1.25;
+      margin-top: 8px;
+    }
+
+    .service-desc {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-top: 8px;
+    }
+
+    .service-price-row {
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .price-val {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    .price-unit {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* Click-to-Load SE London Map */
+    .map-shell {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .map-consent-box {
+      background-color: var(--bg-base);
+      border: 1px dashed var(--border-strong);
+      border-radius: var(--radius-md);
+      padding: 36px 24px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .map-interactive-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.65fr;
+      gap: 24px;
+      align-items: start;
+      margin-top: 16px;
+    }
+
+    .svg-map-wrap {
+      background-color: #F2EFE6;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 12px;
+      overflow: hidden;
+    }
+
+    .borough-pin {
+      cursor: pointer;
+      transition: transform 0.2s var(--ease);
+    }
+
+    .borough-pin:hover circle.pin-outer {
+      fill: var(--gold);
+    }
+
+    .borough-pin.selected circle.pin-outer {
+      fill: var(--navy);
+      stroke: var(--gold);
+      stroke-width: 3;
+    }
+
+    .borough-detail-card {
+      background-color: var(--bg-base);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .borough-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 12px;
+    }
+
+    .borough-pill {
+      padding: 6px 10px;
+      font-size: 12px;
+      font-weight: 500;
+      border-radius: 999px;
+      border: 1px solid var(--border-strong);
+      background-color: var(--bg-surface);
+      color: var(--navy);
+    }
+
+    .borough-pill.active {
+      background-color: var(--navy);
+      color: #FFFFFF;
+      border-color: var(--navy);
+    }
+
+    /* Services Page Comparison */
+    .scope-banner {
+      background-color: var(--green-soft);
+      border: 1px solid #C6DDD5;
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 24px;
+      font-size: 14px;
+      color: var(--green);
+    }
+
+    .comparison-table-wrap {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow-x: auto;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 720px;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      padding: 16px 18px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      vertical-align: top;
+    }
+
+    .comparison-table th {
+      background-color: var(--bg-base);
+      font-weight: 600;
+      color: var(--navy);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* Service Detail Page */
+    .detail-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .panel {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 26px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .checklist {
+      list-style: none;
+      margin: 16px 0 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--bg-muted);
+    }
+
+    .checklist li:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .report-preview {
+      background-color: var(--bg-base);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      margin-top: 16px;
+    }
+
+    .report-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 12px;
+      color: var(--text-muted);
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 14px;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      background-color: var(--green-soft);
+      color: var(--green);
+    }
+
+    .stripe-lifecycle {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .stripe-step {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 12px;
+      border-radius: var(--radius-sm);
+      background-color: var(--bg-base);
+      border: 1px solid var(--border);
+      font-size: 13px;
+    }
+
+    /* Enquiry & 5-Stage Plan */
+    .tabs-bar {
+      display: inline-flex;
+      background-color: var(--bg-muted);
+      padding: 4px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      margin-bottom: 24px;
+    }
+
+    .tab-btn {
+      padding: 9px 16px;
+      border: none;
+      background: transparent;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    .tab-btn.active {
+      background-color: var(--bg-surface);
+      color: var(--navy);
+      font-weight: 600;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .enquiry-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+
+    .form-group label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-strong);
+      background-color: var(--bg-surface);
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      color: var(--navy);
+    }
+
+    .form-control:focus {
+      outline: 2px solid var(--gold);
+      outline-offset: 1px;
+      border-color: var(--gold);
+    }
+
+    .form-error {
+      font-size: 12px;
+      color: #9B2C2C;
+      display: none;
+    }
+
+    .inbox-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .inbox-item {
+      padding: 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      background-color: var(--bg-base);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .inbox-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      font-size: 13px;
+    }
+
+    .stage-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+    }
+
+    .stage-card {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .stage-num {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gold-hover);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Footer & Legal Modals */
+    .site-footer {
+      background-color: var(--navy);
+      color: #DCE3EC;
+      padding: 36px 0;
+      border-top: 1px solid #1E344D;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 13px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-link-btn {
+      background: transparent;
+      border: none;
+      color: #DCE3EC;
+      font-size: 13px;
+      padding: 0;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .footer-link-btn:hover {
+      color: var(--gold);
+    }
+
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(18, 35, 56, 0.55);
+      z-index: 80;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal-card {
+      background-color: var(--bg-surface);
+      border-radius: var(--radius-lg);
+      max-width: 560px;
+      width: 100%;
+      padding: 28px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-md);
+    }
+
+    .modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 16px;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .hero-grid,
+      .map-interactive-grid,
+      .detail-grid,
+      .enquiry-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stage-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .desktop-nav {
+        display: none;
+      }
+
+      .mobile-menu-btn {
+        display: inline-flex;
+      }
+
+      .hero-card {
+        padding: 24px;
+      }
+
+      .services-grid-4,
+      .stage-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .scope-banner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand" data-route="home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B88E3D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 21V10a7 7 0 0 1 14 0v11" />
+            <path d="M9 21v-7.5a3 3 0 0 1 6 0V21" stroke="#F8F7F3" />
+            <line x1="3" y1="21" x2="21" y2="21" />
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">M &amp; M (P) International</span>
+          <span class="brand-sub">South East London</span>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <button class="nav-link active" data-route="home">Home</button>
+        <button class="nav-link" data-route="services">Services</button>
+        <button class="nav-link" data-route="detail">Overseas Property Care</button>
+        <button class="nav-link" data-route="map">SE London Map</button>
+        <button class="nav-link" data-route="plan">5-Stage Delivery Plan</button>
+        <button class="nav-cta" data-route="enquiry">Make an Enquiry</button>
+      </nav>
+
+      <button class="mobile-menu-btn" id="openMobileMenu" aria-label="Open navigation menu" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="17" x2="20" y2="17" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer-backdrop" id="mobileBackdrop"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile navigation">
+    <div class="mobile-drawer-header">
+      <span class="brand-name" style="font-size:17px;">M &amp; M (P) International</span>
+      <button class="mobile-menu-btn" id="closeMobileMenu" aria-label="Close navigation menu" style="display:inline-flex;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+          <line x1="6" y1="6" x2="18" y2="18" />
+          <line x1="6" y1="18" x2="18" y2="6" />
+        </svg>
+      </button>
+    </div>
+    <button class="mobile-nav-link active" data-route="home">Home</button>
+    <button class="mobile-nav-link" data-route="services">Services</button>
+    <button class="mobile-nav-link" data-route="detail">Overseas Property Care</button>
+    <button class="mobile-nav-link" data-route="map">SE London Map</button>
+    <button class="mobile-nav-link" data-route="plan">5-Stage Delivery Plan</button>
+    <button class="btn btn-primary" data-route="enquiry" style="margin-top:8px; width:100%;">Make an Enquiry</button>
+  </aside>
+
+  <main>
+    <!-- VIEW 1: HOME -->
+    <section id="view-home" class="view-section active">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-card">
+            <div>
+              <span class="eyebrow">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+                Independent Local Representation
+              </span>
+              <h1 class="hero-title">Here when you can't be</h1>
+              <p class="hero-copy" style="margin-top:16px;">
+                Independent property checks, relocation coordination, and UK business landing support across South East London for overseas owners and families in the UAE, India, and worldwide. Not an estate agent.
+              </p>
+            </div>
+            <div class="hero-actions">
+              <button class="btn btn-primary" data-route="enquiry">
+                Make an enquiry
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </button>
+              <button class="btn btn-secondary" data-route="services">Explore 4 fixed-fee services</button>
+            </div>
+          </div>
+
+          <aside class="hero-aside">
+            <div>
+              <h3>Why overseas owners work with us</h3>
+              <ul class="trust-list" style="margin-top:16px;">
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+                  <span>Transparent, VAT-inclusive fixed fees with zero hidden commission.</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+                  <span>Timestamped photo reports delivered in your private client portal.</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+                  <span>Direct local coverage across Greenwich, Woolwich, Abbey Wood, Lewisham, Bexley, and Bromley.</span>
+                </li>
+              </ul>
+            </div>
+            <div class="aside-meta tabular">
+              M &amp; M P (LONDON) LIMITED · Co. 14591009 · VAT 490 7775 47
+            </div>
+          </aside>
+        </div>
+
+        <!-- 4 Fixed-Fee Services Overview -->
+        <div class="section-head">
+          <div>
+            <h2>Four fixed-fee services</h2>
+            <p class="section-sub">Clear, practical local coordination in South East London. Every fee below is inclusive of UK VAT.</p>
+          </div>
+          <button class="btn btn-secondary" data-route="services">Compare all services</button>
+        </div>
+
+        <div class="services-grid-4">
+          <article class="service-card">
+            <div>
+              <span class="service-tag">Single Visit</span>
+              <h3>Local Property Check</h3>
+              <p class="service-desc">Independent visual inspection, meter readings, damp check, and timestamped photo report.</p>
+            </div>
+            <div>
+              <div class="service-price-row">
+                <span class="price-val tabular">£175</span>
+                <span class="price-unit">per visit (VAT incl.)</span>
+              </div>
+              <button class="btn btn-secondary" style="width:100%; margin-top:12px;" data-route="detail">View checklist</button>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div>
+              <span class="service-tag">Monthly Retainer</span>
+              <h3>Overseas Property Care</h3>
+              <p class="service-desc">Scheduled monthly visits, keyholding, post forwarding, and contractor access supervision.</p>
+            </div>
+            <div>
+              <div class="service-price-row">
+                <span class="price-val tabular">£225</span>
+                <span class="price-unit">per month (VAT incl.)</span>
+              </div>
+              <button class="btn btn-primary" style="width:100%; margin-top:12px;" data-route="detail">Explore plan</button>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div>
+              <span class="service-tag">Relocation</span>
+              <h3>Family Relocation Support</h3>
+              <p class="service-desc">Neighbourhood orientation, school-run logistics, and local setup coordination for arriving families.</p>
+            </div>
+            <div>
+              <div class="service-price-row">
+                <span class="price-val tabular">£950</span>
+                <span class="price-unit">per assignment (VAT incl.)</span>
+              </div>
+              <button class="btn btn-secondary" style="width:100%; margin-top:12px;" data-route="enquiry" data-service="Family Relocation Support (£950/assignment)">Enquire</button>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div>
+              <span class="service-tag">Commercial</span>
+              <h3>UK Business Landing Support</h3>
+              <p class="service-desc">Practical local coordination for overseas founders establishing a South East London presence.</p>
+            </div>
+            <div>
+              <div class="service-price-row">
+                <span class="price-val tabular">£1,500</span>
+                <span class="price-unit">per assignment (VAT incl.)</span>
+              </div>
+              <button class="btn btn-secondary" style="width:100%; margin-top:12px;" data-route="enquiry" data-service="UK Business Landing Support (£1,500/assignment)">Enquire</button>
+            </div>
+          </article>
+        </div>
+
+        <!-- Click-to-Load South East London Neighbourhood Orientation Map -->
+        <div id="se-london-map-anchor" class="map-shell">
+          <div class="section-head" style="margin-bottom:12px;">
+            <div>
+              <h2>South East London Neighbourhood Orientation</h2>
+              <p class="section-sub">Explore transport links and local property check coverage across 8 key areas.</p>
+            </div>
+          </div>
+
+          <div id="mapConsentBox" class="map-consent-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1D4B3E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <p style="font-size:15px; color:var(--navy); font-weight:500;">Privacy-first map loading</p>
+            <p style="font-size:14px; color:var(--text-secondary); max-width:54ch;">
+              No external map scripts or tracking cookies are loaded until you choose to open the interactive South East London orientation map.
+            </p>
+            <div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center;">
+              <button class="btn btn-green" id="loadMapBtn">Click to load interactive South East London map</button>
+              <a class="btn btn-secondary" href="https://www.google.com/maps/place/South+East+London,+London" target="_blank" rel="noopener noreferrer">Open external Google Maps</a>
+            </div>
+          </div>
+
+          <div id="mapInteractiveArea" style="display:none;">
+            <div class="borough-pills" id="boroughPills"></div>
+            <div class="map-interactive-grid">
+              <div class="svg-map-wrap">
+                <svg viewBox="0 0 640 380" style="width:100%;height:auto;display:block" role="img" aria-label="Interactive South East London neighbourhood map">
+                  <!-- River Thames -->
+                  <path d="M 10 95 C 120 75, 220 120, 320 90 C 420 60, 520 85, 630 70" fill="none" stroke="#BFD3E6" stroke-width="22" stroke-linecap="round" />
+                  <text x="275" y="74" font-size="11" fill="#415164" font-family="Roboto, sans-serif" font-weight="500">River Thames</text>
+
+                  <!-- Elizabeth Line & Rail Corridors -->
+                  <path d="M 170 125 L 330 112 L 455 108" fill="none" stroke="#6E4C9E" stroke-width="3" stroke-dasharray="6 4" />
+                  <path d="M 110 190 L 170 125 L 250 220 L 390 250" fill="none" stroke="#9AA8B8" stroke-width="2" />
+                  <path d="M 110 190 L 145 310" fill="none" stroke="#9AA8B8" stroke-width="2" />
+
+                  <!-- Borough Pins -->
+                  <g class="borough-pin" data-borough="greenwich" transform="translate(170,125)">
+                    <circle class="pin-outer" r="11" fill="#1D4B3E" stroke="#FFFFFF" stroke-width="2" />
+                    <text y="24" text-anchor="middle" font-size="12" font-weight="600" fill="#122338">Greenwich</text>
+                  </g>
+                  <g class="borough-pin" data-borough="woolwich" transform="translate(330,112)">
+                    <circle class="pin-outer" r="11" fill="#1D4B3E" stroke="#FFFFFF" stroke-width="2" />
+                    <text y="24" text-anchor="middle" font-size="12" font-weight="600" fill="#122338">Woolwich</text>
+                  </g>
+                  <g class="borough-pin" data-borough="abbey-wood" transform="translate(455,108)">
+                    <circle class="pin-outer" r="11" fill="#1D4B3E" stroke="#FFFFFF" stroke-width="2" />
+                    <text y="24" text-anchor="middle" font-size="12" font-weight="600" fill="#122338">Abbey Wood</text>
+                  </g>
+                  <g class="borough-pin" data-borough="plumstead" transform="translate(385,155)">
+                    <circle class="pin-outer" r="10" fill="#1D4B3E" stroke="#FFFFFF" stroke-width="2" />
+                    <text y="23" text-anchor="middle" font-size="12" font-weight="600" fill="#122338">Plumstead</text>
+                  </g>
+                  <g class="borough-pin" data-borough="eltham" transform="translate(275,215)">
+                    <circle class="pin-outer" r="10" fill="#1D4B3E" stroke="#FFFFFF" stroke-width="2" />
+                    <text y="23" text-anchor="middle" font-size="12" font-weight="600" fill="#122338">Eltham</text>
+                  </g>
+                  <g class="borough-pin" data-borough="lewisham" transform="translate(115,190)">
+                    <circle class="pin-outer" r="11" fill="#1D4B3E" stroke="#FFFFFF" stroke-width="2" />
+                    <text y="24" text-anchor="middle" font-size="12" font-weight="600" fill="#122338">Lewisham</text>
+                  </g>
+                  <g class="borough-pin" data-borough="bexley" transform="translate(505,220)">
+                    <circle class="pin-outer" r="10" fill="#1D4B3E" stroke="#FFFFFF" stroke-width="2" />
+                    <text y="23" text-anchor="middle" font-size="12" font-weight="600" fill="#122338">Bexley</text>
+                  </g>
+                  <g class="borough-pin" data-borough="bromley" transform="translate(175,310)">
+                    <circle class="pin-outer" r="11" fill="#1D4B3E" stroke="#FFFFFF" stroke-width="2" />
+                    <text y="24" text-anchor="middle" font-size="12" font-weight="600" fill="#122338">Bromley</text>
+                  </g>
+                </svg>
+              </div>
+              <div class="borough-detail-card" id="boroughDetailCard"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW 2: SERVICES -->
+    <section id="view-services" class="view-section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h1>Fixed-Fee Services</h1>
+            <p class="section-sub">Concise, transparent support for overseas property owners, relocating families, and international founders.</p>
+          </div>
+          <button class="btn btn-primary" data-route="enquiry">Make an enquiry</button>
+        </div>
+
+        <div class="scope-banner">
+          <div>
+            <strong>Clear scope boundary:</strong> Practical local coordination, never unregulated financial or estate-agency sales.
+          </div>
+          <span class="tabular" style="font-weight:600;">All fees include 20% UK VAT</span>
+        </div>
+
+        <div class="comparison-table-wrap">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Service</th>
+                <th>Best For</th>
+                <th>Key Deliverables</th>
+                <th>Fee (VAT incl.)</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Local Property Check</strong></td>
+                <td>Overseas landlords needing a one-off independent inspection</td>
+                <td>Visual interior/exterior check, meter readings, damp/leak check, timestamped photo report</td>
+                <td class="tabular"><strong>£175</strong> / visit</td>
+                <td><button class="btn btn-secondary" data-route="detail">View detail</button></td>
+              </tr>
+              <tr>
+                <td><strong>Overseas Property Care</strong></td>
+                <td>Vacant or tenanted homes requiring ongoing monthly oversight</td>
+                <td>Monthly scheduled visit, keyholding, post forwarding, contractor access supervision</td>
+                <td class="tabular"><strong>£225</strong> / month</td>
+                <td><button class="btn btn-primary" data-route="detail">Select service</button></td>
+              </tr>
+              <tr>
+                <td><strong>Family Relocation Support</strong></td>
+                <td>Families moving to South East London from UAE, India, or abroad</td>
+                <td>Neighbourhood orientation, school-run logistics, utility &amp; council tax setup coordination</td>
+                <td class="tabular"><strong>£950</strong> / assignment</td>
+                <td><button class="btn btn-secondary" data-route="enquiry" data-service="Family Relocation Support (£950/assignment)">Select service</button></td>
+              </tr>
+              <tr>
+                <td><strong>UK Business Landing Support</strong></td>
+                <td>Overseas founders establishing a practical UK operational base</td>
+                <td>Local office/workspace viewing coordination, mail handling setup, local orientation</td>
+                <td class="tabular"><strong>£1,500</strong> / assignment</td>
+                <td><button class="btn btn-secondary" data-route="enquiry" data-service="UK Business Landing Support (£1,500/assignment)">Select service</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW 3: SERVICE DETAIL (OVERSEAS PROPERTY CARE) -->
+    <section id="view-detail" class="view-section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Model Service Detail</span>
+            <h1 style="margin-top:8px;">Overseas Property Care &amp; Local Property Check</h1>
+            <p class="section-sub">Structured on-site inspections in South East London with a clean Read-Online report in your private client portal.</p>
+          </div>
+          <button class="btn btn-primary" data-route="enquiry" data-service="Overseas Property Care (£225/month)">Book this service</button>
+        </div>
+
+        <div class="detail-grid">
+          <div class="panel">
+            <h2>Structured Visit Checklist</h2>
+            <p class="section-sub" style="margin-top:4px;">Completed on every <span class="tabular">£225/month</span> Overseas Property Care visit and <span class="tabular">£175/visit</span> Local Property Check.</p>
+            <ul class="checklist">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1D4B3E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+                <span><strong>Meter Readings:</strong> Timestamped photographs of gas, electricity, and water meters.</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1D4B3E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+                <span><strong>Damp &amp; Leak Inspection:</strong> Visual check of ceilings, window seals, bathrooms, and boiler pressure.</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1D4B3E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+                <span><strong>Post Forwarding:</strong> Collection, sorting, and scanned summary of urgent council or utility mail.</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1D4B3E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+                <span><strong>Keyholding &amp; Access:</strong> Secure keyholding and supervised access for approved contractors.</span>
+              </li>
+            </ul>
+
+            <h3 style="margin-top:26px; font-size:20px;">Sample Read-Online Report Preview</h3>
+            <div class="report-preview">
+              <div class="report-meta tabular">
+                <span><strong>Property:</strong> Royal Arsenal Riverside, Woolwich SE18</span>
+                <span><strong>Visit Date:</strong> 14 Nov 2026, 10:40 GMT</span>
+                <span class="status-badge">All Clear</span>
+              </div>
+              <p style="font-size:14px; color:var(--text-secondary);">
+                Windows and balcony doors locked and dry. Boiler pressure at 1.4 bar. Electricity meter reading 04821 kWh recorded. Two items of Royal Mail collected and scanned to your portal inbox.
+              </p>
+            </div>
+          </div>
+
+          <div class="panel">
+            <h3>Billing &amp; Stripe Checkout Lifecycle</h3>
+            <p class="section-sub" style="margin-top:6px;">Read-only preview of how client billing and webhook confirmation operate.</p>
+            <div class="stripe-lifecycle">
+              <div class="stripe-step">
+                <span>1. Service &amp; Borough Selected</span>
+                <span class="status-badge tabular">£225/mo</span>
+              </div>
+              <div class="stripe-step">
+                <span>2. Stripe Hosted Checkout</span>
+                <span style="color:var(--text-muted); font-size:12px;">GBP · VAT Included</span>
+              </div>
+              <div class="stripe-step">
+                <span>3. Webhook Verified</span>
+                <span style="color:var(--green); font-size:12px; font-weight:600;">Portal Activated</span>
+              </div>
+              <div class="stripe-step">
+                <span>4. First Visit Scheduled</span>
+                <span style="color:var(--text-muted); font-size:12px;">Within 48h (Mon-Fri)</span>
+              </div>
+            </div>
+            <div style="margin-top:20px; padding-top:16px; border-top:1px solid var(--border); display:flex; flex-direction:column; gap:10px;">
+              <button class="btn btn-primary" data-route="enquiry" data-service="Overseas Property Care (£225/month)">Request Overseas Property Care</button>
+              <button class="btn btn-secondary" data-route="services">Back to all services</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW 4: ENQUIRY & 5-STAGE DELIVERY PLAN -->
+    <section id="view-enquiry" class="view-section">
+      <div class="container">
+        <div class="tabs-bar" role="tablist">
+          <button class="tab-btn active" id="tabEnquiryBtn" role="tab" aria-selected="true">Enquiry &amp; Owner Inbox Preview</button>
+          <button class="tab-btn" id="tabPlanBtn" role="tab" aria-selected="false">5-Stage Takeover &amp; Handover Plan</button>
+        </div>
+
+        <!-- Tab 1: Enquiry Form & Resilient Owner Inbox -->
+        <div id="tabEnquiryPanel">
+          <div class="enquiry-grid">
+            <div class="panel">
+              <h2>Make an Enquiry</h2>
+              <p class="section-sub" style="margin-top:4px; margin-bottom:18px;">
+                Every enquiry is saved directly to the database first so no lead is lost even if email notification is delayed.
+              </p>
+              <form id="enquiryForm" novalidate>
+                <div class="form-group">
+                  <label for="eqName">Full Name</label>
+                  <input class="form-control" id="eqName" type="text" placeholder="e.g. Rajesh Sharma" required />
+                  <span class="form-error" id="errName">Please enter your full name.</span>
+                </div>
+                <div class="form-group">
+                  <label for="eqCountry">Country of Residence</label>
+                  <select class="form-control" id="eqCountry">
+                    <option value="UAE">UAE</option>
+                    <option value="India">India</option>
+                    <option value="UK">UK</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="eqService">Service</label>
+                  <select class="form-control" id="eqService">
+                    <option value="Local Property Check (£175/visit)">Local Property Check (£175/visit)</option>
+                    <option value="Overseas Property Care (£225/month)">Overseas Property Care (£225/month)</option>
+                    <option value="Family Relocation Support (£950/assignment)">Family Relocation Support (£950/assignment)</option>
+                    <option value="UK Business Landing Support (£1,500/assignment)">UK Business Landing Support (£1,500/assignment)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="eqBorough">South East London Borough</label>
+                  <select class="form-control" id="eqBorough">
+                    <option value="Greenwich">Greenwich</option>
+                    <option value="Woolwich">Woolwich</option>
+                    <option value="Abbey Wood">Abbey Wood</option>
+                    <option value="Plumstead">Plumstead</option>
+                    <option value="Eltham">Eltham</option>
+                    <option value="Lewisham">Lewisham</option>
+                    <option value="Bexley">Bexley</option>
+                    <option value="Bromley">Bromley</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="eqMessage">Brief Details</label>
+                  <textarea class="form-control" id="eqMessage" rows="3" placeholder="Property address or relocation timeline..."></textarea>
+                  <span class="form-error" id="errMessage">Please include a short note about your requirement.</span>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:100%;">Submit enquiry</button>
+              </form>
+            </div>
+
+            <div class="panel">
+              <h3>Owner Inbox Preview (Mayank Patel)</h3>
+              <p class="section-sub" style="margin-top:4px;">
+                Simulated resilient database queue. New enquiries appear immediately with <strong>Status: New</strong>.
+              </p>
+              <div class="inbox-list" id="inboxList">
+                <div class="inbox-item">
+                  <div class="inbox-top">
+                    <strong>A. Al-Mansoor (UAE)</strong>
+                    <span class="status-badge">Status: New</span>
+                  </div>
+                  <div style="font-size:13px; color:var(--text-secondary);">Overseas Property Care (£225/month) · Woolwich</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: 5-Stage Takeover & Handover Plan -->
+        <div id="tabPlanPanel" style="display:none;">
+          <div class="section-head">
+            <div>
+              <h2>5-Stage Takeover &amp; Handover Plan</h2>
+              <p class="section-sub">Structured delivery roadmap for Mayank Patel from audit to production cutover.</p>
+            </div>
+          </div>
+          <div class="stage-grid">
+            <div class="stage-card">
+              <span class="stage-num tabular">Stage 1</span>
+              <h4>Codebase &amp; Cloud Audit</h4>
+              <p style="font-size:13px; color:var(--text-secondary);">Review existing repository, DNS, hosting, and broken routes such as the 404 advice page.</p>
+            </div>
+            <div class="stage-card">
+              <span class="stage-num tabular">Stage 2</span>
+              <h4>Approved Designs</h4>
+              <p style="font-size:13px; color:var(--text-secondary);">Sign-off on desktop and mobile layouts for Home, Services, and Service Detail.</p>
+            </div>
+            <div class="stage-card">
+              <span class="stage-num tabular">Stage 3</span>
+              <h4>TanStack Start Implementation</h4>
+              <p style="font-size:13px; color:var(--text-secondary);">Build fast, type-safe routes, click-to-load SE London map, and Read-Online report views.</p>
+            </div>
+            <div class="stage-card">
+              <span class="stage-num tabular">Stage 4</span>
+              <h4>Auth, Stripe Webhook &amp; Legal Wording</h4>
+              <p style="font-size:13px; color:var(--text-secondary);">Wire client portal auth, Stripe webhook verification, and UK VAT/legal disclosures.</p>
+            </div>
+            <div class="stage-card">
+              <span class="stage-num tabular">Stage 5</span>
+              <h4>Staging, Cutover &amp; Handover</h4>
+              <p style="font-size:13px; color:var(--text-secondary);">Final QA across desktop/mobile, DNS cutover to mmpglobaladvisory.com, and owner handover.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="tabular">
+        M &amp; M P (LONDON) LIMITED · Company No. 14591009 · VAT 490 7775 47 · Monday to Friday 09:30 to 16:00 GMT
+      </div>
+      <div class="footer-links">
+        <button class="footer-link-btn" data-legal="privacy">Privacy</button>
+        <button class="footer-link-btn" data-legal="disclaimer">Disclaimer</button>
+        <button class="footer-link-btn" data-legal="terms">Terms</button>
+        <button class="footer-link-btn" data-legal="cookies">Cookie Preferences</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Legal Modal -->
+  <div class="modal-backdrop" id="legalModalBackdrop" role="dialog" aria-modal="true" aria-labelledby="legalModalTitle">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="legalModalTitle">Legal Notice</h3>
+        <button class="mobile-menu-btn" id="closeLegalModal" aria-label="Close modal" style="display:inline-flex;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <line x1="6" y1="6" x2="18" y2="18" />
+            <line x1="6" y1="18" x2="18" y2="6" />
+          </svg>
+        </button>
+      </div>
+      <div id="legalModalBody" style="font-size:14px; color:var(--text-secondary); line-height:1.65;"></div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const views = {
+        home: document.getElementById('view-home'),
+        services: document.getElementById('view-services'),
+        detail: document.getElementById('view-detail'),
+        enquiry: document.getElementById('view-enquiry')
+      };
+
+      const navButtons = document.querySelectorAll('[data-route]');
+      const mobileDrawer = document.getElementById('mobileDrawer');
+      const mobileBackdrop = document.getElementById('mobileBackdrop');
+      const openMobileBtn = document.getElementById('openMobileMenu');
+      const closeMobileBtn = document.getElementById('closeMobileMenu');
+
+      const tabEnquiryBtn = document.getElementById('tabEnquiryBtn');
+      const tabPlanBtn = document.getElementById('tabPlanBtn');
+      const tabEnquiryPanel = document.getElementById('tabEnquiryPanel');
+      const tabPlanPanel = document.getElementById('tabPlanPanel');
+
+      function setMobileMenu(open) {
+        mobileDrawer.classList.toggle('open', open);
+        mobileBackdrop.classList.toggle('open', open);
+        openMobileBtn.setAttribute('aria-expanded', String(open));
+      }
+
+      openMobileBtn.addEventListener('click', () => setMobileMenu(true));
+      closeMobileBtn.addEventListener('click', () => setMobileMenu(false));
+      mobileBackdrop.addEventListener('click', () => setMobileMenu(false));
+
+      function switchEnquiryTab(tab) {
+        const isPlan = tab === 'plan';
+        tabEnquiryBtn.classList.toggle('active', !isPlan);
+        tabPlanBtn.classList.toggle('active', isPlan);
+        tabEnquiryPanel.style.display = isPlan ? 'none' : 'block';
+        tabPlanPanel.style.display = isPlan ? 'block' : 'none';
+      }
+
+      tabEnquiryBtn.addEventListener('click', () => switchEnquiryTab('enquiry'));
+      tabPlanBtn.addEventListener('click', () => switchEnquiryTab('plan'));
+
+      function navigate(route, servicePreset) {
+        setMobileMenu(false);
+
+        if (route === 'map') {
+          Object.values(views).forEach(v => v.classList.remove('active'));
+          views.home.classList.add('active');
+          document.getElementById('se-london-map-anchor').scrollIntoView({ behavior: 'smooth' });
+        } else if (route === 'plan') {
+          Object.values(views).forEach(v => v.classList.remove('active'));
+          views.enquiry.classList.add('active');
+          switchEnquiryTab('plan');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+          Object.entries(views).forEach(([key, el]) => {
+            el.classList.toggle('active', key === route);
+          });
+          if (route === 'enquiry') {
+            switchEnquiryTab('enquiry');
+            if (servicePreset) {
+              document.getElementById('eqService').value = servicePreset;
+            }
+          }
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.route === route);
+        });
+      }
+
+      navButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          navigate(btn.dataset.route, btn.dataset.service);
+        });
+      });
+
+      // Click-to-Load SE London Map
+      const boroughs = {
+        'greenwich': {
+          name: 'Greenwich',
+          transport: 'DLR, Southeastern, Thames Clippers',
+          notes: 'High concentration of riverside apartments and heritage townhomes; regular damp & balcony seal checks.'
+        },
+        'woolwich': {
+          name: 'Woolwich',
+          transport: 'Elizabeth Line (8 mins to Canary Wharf), DLR, Southeastern',
+          notes: 'Strong demand from UAE and India-based owners at Royal Arsenal; monthly keyholding and meter checks.'
+        },
+        'abbey-wood': {
+          name: 'Abbey Wood',
+          transport: 'Elizabeth Line terminus (direct to Heathrow & Central London)',
+          notes: 'Growing commuter hub; frequent pre-tenancy and void-period inspections.'
+        },
+        'plumstead': {
+          name: 'Plumstead',
+          transport: 'Southeastern Rail, bus links to Woolwich Elizabeth Line',
+          notes: 'Victorian terraces requiring seasonal gutter, roof, and damp-course checks.'
+        },
+        'eltham': {
+          name: 'Eltham',
+          transport: 'Southeastern Rail to London Bridge & Charing Cross',
+          notes: 'Popular with relocating families seeking quiet residential streets and local schools.'
+        },
+        'lewisham': {
+          name: 'Lewisham',
+          transport: 'DLR & Southeastern interchange',
+          notes: 'Fast links to Canary Wharf and the City; frequent contractor access supervision.'
+        },
+        'bexley': {
+          name: 'Bexley',
+          transport: 'Southeastern Rail',
+          notes: 'Suburban family homes; garden maintenance oversight and post forwarding.'
+        },
+        'bromley': {
+          name: 'Bromley',
+          transport: 'Southeastern & Thameslink (16 mins to London Victoria)',
+          notes: 'Key family relocation area; school-run orientation and utility setup support.'
+        }
+      };
+
+      const loadMapBtn = document.getElementById('loadMapBtn');
+      const mapConsentBox = document.getElementById('mapConsentBox');
+      const mapInteractiveArea = document.getElementById('mapInteractiveArea');
+      const boroughPills = document.getElementById('boroughPills');
+      const boroughDetailCard = document.getElementById('boroughDetailCard');
+
+      function selectBorough(key) {
+        const b = boroughs[key];
+        if (!b) return;
+        document.querySelectorAll('.borough-pin').forEach(p => {
+          p.classList.toggle('selected', p.dataset.borough === key);
+        });
+        document.querySelectorAll('.borough-pill').forEach(p => {
+          p.classList.toggle('active', p.dataset.borough === key);
+        });
+        boroughDetailCard.innerHTML = `
+          <span class="service-tag">SE London Coverage</span>
+          <h3 style="font-size:22px;">${b.name}</h3>
+          <p style="font-size:13px; color:var(--green); font-weight:600;">Transport: ${b.transport}</p>
+          <p style="font-size:14px; color:var(--text-secondary);">${b.notes}</p>
+          <button class="btn btn-primary" id="mapEnquireBtn" style="margin-top:6px;">Book check in ${b.name}</button>
+        `;
+        document.getElementById('mapEnquireBtn').addEventListener('click', () => {
+          navigate('enquiry', 'Local Property Check (£175/visit)');
+          document.getElementById('eqBorough').value = b.name;
+        });
+      }
+
+      loadMapBtn.addEventListener('click', () => {
+        mapConsentBox.style.display = 'none';
+        mapInteractiveArea.style.display = 'block';
+        if (!boroughPills.children.length) {
+          Object.entries(boroughs).forEach(([key, b]) => {
+            const pill = document.createElement('button');
+            pill.className = 'borough-pill';
+            pill.textContent = b.name;
+            pill.dataset.borough = key;
+            pill.addEventListener('click', () => selectBorough(key));
+            boroughPills.appendChild(pill);
+          });
+          document.querySelectorAll('.borough-pin').forEach(pin => {
+            pin.addEventListener('click', () => selectBorough(pin.dataset.borough));
+          });
+        }
+        selectBorough('woolwich');
+      });
+
+      // Enquiry Form Validation & Simulated Resilient Inbox
+      const enquiryForm = document.getElementById('enquiryForm');
+      const inboxList = document.getElementById('inboxList');
+
+      enquiryForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('eqName').value.trim();
+        const country = document.getElementById('eqCountry').value;
+        const service = document.getElementById('eqService').value;
+        const borough = document.getElementById('eqBorough').value;
+        const msg = document.getElementById('eqMessage').value.trim();
+
+        const errName = document.getElementById('errName');
+        const errMessage = document.getElementById('errMessage');
+        errName.style.display = name ? 'none' : 'block';
+        errMessage.style.display = msg ? 'none' : 'block';
+
+        if (!name || !msg) return;
+
+        const item = document.createElement('div');
+        item.className = 'inbox-item';
+        item.innerHTML = `
+          <div class="inbox-top">
+            <strong>${name} (${country})</strong>
+            <span class="status-badge">Status: New</span>
+          </div>
+          <div style="font-size:13px; color:var(--text-secondary);">${service} · ${borough}</div>
+          <div style="font-size:12px; color:var(--text-muted);">${msg}</div>
+        `;
+        inboxList.prepend(item);
+        enquiryForm.reset();
+      });
+
+      // Legal Modals
+      const legalCopy = {
+        privacy: {
+          title: 'Privacy Policy',
+          body: 'M & M P (LONDON) LIMITED (Company No. 14591009) processes enquiry and property-care data solely to deliver requested services in accordance with UK GDPR. No third-party map or marketing cookies are loaded without explicit consent.'
+        },
+        disclaimer: {
+          title: 'Scope Disclaimer',
+          body: 'M & M (P) International provides independent property checks, relocation coordination, and business landing support. We are not an estate agent and do not provide regulated financial, tax, or legal advice.'
+        },
+        terms: {
+          title: 'Terms of Engagement',
+          body: 'All fixed-fee services are billed in GBP inclusive of 20% UK VAT (VAT No. 490 7775 47). Standard operating hours are Monday to Friday, 09:30 to 16:00 GMT.'
+        },
+        cookies: {
+          title: 'Cookie Preferences',
+          body: 'Essential session state only. Interactive South East London map content is loaded on demand when you click to view it.'
+        }
+      };
+
+      const legalBackdrop = document.getElementById('legalModalBackdrop');
+      const legalTitle = document.getElementById('legalModalTitle');
+      const legalBody = document.getElementById('legalModalBody');
+
+      document.querySelectorAll('[data-legal]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const item = legalCopy[btn.dataset.legal];
+          legalTitle.textContent = item.title;
+          legalBody.textContent = item.body;
+          legalBackdrop.classList.add('open');
+        });
+      });
+
+      document.getElementById('closeLegalModal').addEventListener('click', () => {
+        legalBackdrop.classList.remove('open');
+      });
+
+      legalBackdrop.addEventListener('click', (e) => {
+        if (e.target === legalBackdrop) legalBackdrop.classList.remove('open');
+      });
+    })();
+  </script>
+</body>
+</html>
